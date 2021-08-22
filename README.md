@@ -24,7 +24,7 @@ For orders list -> https://yummyfoodserver.herokuapp.com/order/all</br>
   alt="gif" 
   height="500"
   />
-## Sign in and Sign up Screen
+## Sign in and Sign up Screens
 <img src="./screens/signup_signin.gif" 
   alt="gif" 
   height="500"
@@ -34,7 +34,7 @@ For orders list -> https://yummyfoodserver.herokuapp.com/order/all</br>
   alt="gif" 
   height="500"
   />
-## Splash Home and Restaurant Listing Screen
+## Splash Home and Restaurant Listing Screens
 <img src="./screens/restaurant_list.gif" 
   alt="gif" 
   height="500"
