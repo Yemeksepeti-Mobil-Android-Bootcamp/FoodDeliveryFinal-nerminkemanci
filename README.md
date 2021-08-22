@@ -34,7 +34,7 @@ For orders list -> https://yummyfoodserver.herokuapp.com/order/all</br>
   alt="gif" 
   height="500"
   />
-## Splash and Home Screen
+## Splash Home and Restaurant Listing Screen
 <img src="./screens/restaurant_list.gif" 
   alt="gif" 
   height="500"
