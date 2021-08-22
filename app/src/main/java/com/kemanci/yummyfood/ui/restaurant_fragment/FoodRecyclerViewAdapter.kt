@@ -24,7 +24,7 @@ class FoodRecyclerViewAdapter(
                 clicker.onClick(position = position)
             }
             binding.textViewFoodName.text = food.name
-            binding.textViewFoodPrice.text = food.price
+            binding.textViewFoodPrice.text = food.price.plus(" TL")
             binding.textViewFoodIngredients.text = food.content
 
             val baseUrl = "https://yummyfoodserver.herokuapp.com"
