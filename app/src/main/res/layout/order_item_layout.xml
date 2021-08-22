@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="5dp"
+    android:paddingEnd="5dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/layout_ripple"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:gravity="start|center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/restaurant_point_card"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#81BF4A"
+                android:layout_width="50dp"
+                android:layout_height="27dp">
+                <TextView
+                    android:id="@+id/restaurant_point_textview"
+                    android:text="4,2"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/restaurant_name_text"
+                android:fontFamily="@font/niramit_medium"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:text="@string/sample_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/date_text_view"
+                android:textColor="@color/tab_text_grey"
+                android:textSize="11sp"
+                android:fontFamily="@font/niramit_regular"
+                android:text="12/12/2021"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Space
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/food_name_text"
+                android:fontFamily="@font/niramit_regular"
+                android:textColor="@color/text_color"
+                android:textSize="13sp"
+                android:text="Martı Döner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:backgroundTint="@color/green_color"
+                android:src="@drawable/ic_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <Space
+                android:layout_weight="0"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/food_price_text"
+                android:fontFamily="@font/niramit_regular"
+                android:textColor="@color/text_color"
+                android:textSize="13dp"
+                android:text="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:fontFamily="@font/niramit_regular"
+                android:textColor="@color/text_color"
+                android:textSize="13dp"
+                android:text="@string/tl_src"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:background="@color/tab_text_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

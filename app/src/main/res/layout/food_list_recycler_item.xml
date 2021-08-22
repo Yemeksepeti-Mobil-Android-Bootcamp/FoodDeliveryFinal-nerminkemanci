@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/foodCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="4dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingVertical="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewFoodName"
+            tools:text="Big King"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageViewFood" />
+
+        <TextView
+            android:id="@+id/textViewFoodIngredients"
+            android:textSize="13sp"
+            tools:text="@string/ingreditens_text"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewFoodName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageViewFood"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textViewFoodPrice"
+            tools:text="33.90 TL"
+            android:textSize="16sp"
+            android:textColor="@color/coral_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textViewFoodIngredients"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+
+            android:id="@+id/imageViewFood"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_not_found"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/orderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:backgroundTint="@color/green_color"
+            android:drawablePadding="2dp"
+            android:padding="0dp"
+            android:text="@string/orders_src"
+            android:textAllCaps="false"
+            android:textSize="11sp"
+            app:icon="@drawable/ic_shopping_basket"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageViewFood"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toEndOf="@+id/textViewFoodPrice"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFoodIngredients"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

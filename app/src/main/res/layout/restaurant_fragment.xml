@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.restaurant_fragment.RestaurantFragment"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        app:srcCompat="@drawable/restaurant_background"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewRestaurantLogo"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/img_not_found"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginStart="20dp"
+        android:elevation="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewRestaurantName"
+        tools:text="Kral Aspava"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@id/imageViewRestaurantLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewBackground" />
+
+    <TextView
+        android:id="@+id/textViewRestaurantScore"
+        tools:text="4/5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@id/imageViewRestaurantLogo"
+        app:layout_constraintTop_toBottomOf="@id/imageViewBackground"
+        app:drawableEndCompat="@drawable/ic_star" />
+
+
+
+    <TextView
+        android:id="@+id/textViewRestaurantAddressLabel"
+        android:text="@string/address_label"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewRestaurantMinDeliveryPriceLabel"
+        app:layout_constraintTop_toBottomOf="@id/imageViewRestaurantLogo" />
+    <TextView
+        android:id="@+id/textViewRestaurantAddress"
+        tools:text="Kadikoy, Caferaga"
+        android:textAlignment="center"
+        android:paddingHorizontal="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewRestaurantAddressLabel"
+        app:layout_constraintStart_toStartOf="@id/textViewRestaurantAddressLabel"
+        app:layout_constraintEnd_toEndOf="@id/textViewRestaurantAddressLabel" />
+
+    <TextView
+        android:id="@+id/textViewRestaurantMinDeliveryPriceLabel"
+        android:text="@string/min_delivery_price_label"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textViewRestaurantAddressLabel"
+        app:layout_constraintEnd_toStartOf="@id/textViewRestaurantDeliveryTimeLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewRestaurantAddressLabel" />
+    <TextView
+        android:id="@+id/textViewRestaurantMinDeliveryPrice"
+        tools:text="40 TL"
+        android:textAlignment="center"
+        android:paddingHorizontal="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewRestaurantMinDeliveryPriceLabel"
+        app:layout_constraintStart_toStartOf="@id/textViewRestaurantMinDeliveryPriceLabel"
+        app:layout_constraintEnd_toEndOf="@id/textViewRestaurantMinDeliveryPriceLabel" />
+
+    <TextView
+        android:id="@+id/textViewRestaurantDeliveryTimeLabel"
+        android:text="@string/min_delivery_time_label"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textViewRestaurantMinDeliveryPriceLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewRestaurantAddressLabel" />
+    <TextView
+        android:id="@+id/textViewRestaurantDeliveryTime"
+        tools:text="30dk"
+        android:textAlignment="center"
+        android:paddingHorizontal="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewRestaurantDeliveryTimeLabel"
+        app:layout_constraintStart_toStartOf="@id/textViewRestaurantDeliveryTimeLabel"
+        app:layout_constraintEnd_toEndOf="@id/textViewRestaurantDeliveryTimeLabel" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:background="@drawable/ic_back"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textViewMenuTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewMenuTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantMinDeliveryPrice" />
+
+
+    <TextView
+        android:id="@+id/textViewMenuTitle"
+        android:text="@string/restaurant_menu_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRestaurantAddress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginHorizontal="15dp"
+        android:id="@+id/recyclerViewFoodList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMenuTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/SplashFragment">
+
+    <fragment
+        android:id="@+id/SplashFragment"
+        android:name="com.kemanci.yummyfood.ui.splash_fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/splash_fragment">
+
+        <action
+            android:id="@+id/action_splash_fragment_to_onboarding_fragment"
+            app:destination="@id/main_onboarding_fragment"
+            app:popUpTo="@id/SplashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splash_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:popUpTo="@id/SplashFragment"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signin_fragment"
+        android:name="com.kemanci.yummyfood.ui.signin_fragment.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/signin_fragment">
+
+        <action
+            android:id="@+id/action_signin_fragment_to_signup_fragment"
+            app:destination="@id/signup_fragment"
+            app:popUpTo="@id/signin_fragment"
+            app:popUpToInclusive="true"/>
+
+
+
+        <action
+            android:id="@+id/action_signin_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:popUpTo="@id/signin_fragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/signup_fragment"
+        android:name="com.kemanci.yummyfood.ui.signup_fragment.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/signup_fragment">
+
+        <action
+            android:id="@+id/action_signup_fragment_to_signin_fragment"
+            app:destination="@id/signin_fragment"
+            app:popUpTo="@id/signup_fragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.kemanci.yummyfood.ui.home_fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/home_fragment">
+
+
+        <argument
+            app:nullable="true"
+            android:name="accountResponse"
+            app:argType="com.kemanci.yummyfood.model.entity.AccountResponse" />
+        <action
+            android:id="@+id/action_home_fragment_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_restaurant_list_fragment"
+            app:destination="@id/restaurant_list_fragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/main_onboarding_fragment"
+        android:name="com.kemanci.yummyfood.ui.onboarding_fragment.MainOnBoardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/main_onboarding_fragment">
+
+        <action
+            android:id="@+id/action_main_onboarding_fragment_to_signin_fragment"
+            app:destination="@id/signin_fragment" />
+        <action
+            android:id="@+id/action_main_onboarding_fragment_to_signup_fragment"
+            app:destination="@id/signup_fragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/restaurant_list_fragment"
+        android:name="com.kemanci.yummyfood.ui.restaurant_list_fragment.RestaurantListFragment"
+        android:label="fragment_restaurant_list"
+        tools:layout="@layout/restaurant_list_fragment">
+
+        <argument
+            android:name="province"
+            app:nullable="true"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_restaurant_list_fragment_to_restaurant_fragment"
+            app:destination="@id/restaurant_fragment" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.kemanci.yummyfood.ui.settings_fragment.SettingsFragment"
+        tools:layout="@layout/settings_fragment"
+        android:label="fragment_settings">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurant_fragment"
+        android:name="com.kemanci.yummyfood.ui.restaurant_fragment.RestaurantFragment"
+        tools:layout="@layout/restaurant_fragment"
+        android:label="fragment_restaurant">
+
+
+        <argument
+            android:name="restaurantId"
+            app:argType="string"
+            app:nullable="true"/>
+
+    </fragment>
+
+
+
+
+</navigation>

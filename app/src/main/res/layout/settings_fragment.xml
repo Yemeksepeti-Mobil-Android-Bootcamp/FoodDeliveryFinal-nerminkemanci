@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingHorizontal="25dp"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings_fragment.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:id="@+id/header_layout"
+        android:gravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_settings" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="13dp"
+            android:fontFamily="@font/niramit_medium"
+            android:text="@string/settings_text"
+            android:textColor="@color/text_color"
+            android:textSize="23sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/settings_layout"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/name_settings_layout">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ad"
+                android:id="@+id/name_settings_edittext"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_weight="1"
+                android:backgroundTint="@color/text_color"
+                android:fontFamily="@font/niramit_regular"
+                android:imeOptions="actionNext"
+                android:layout_marginEnd="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Soyad"
+                android:id="@+id/surname_settings_edittext"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_weight="1"
+                android:backgroundTint="@color/text_color"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/niramit_regular"
+                android:imeOptions="actionNext"/>
+
+        </LinearLayout>
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_settings_edittext"
+            android:drawablePadding = "10dp"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/niramit_regular"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/text_color"
+            android:imeOptions="actionNext"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableTint="@color/text_color"
+            android:hint="@string/email_src" />
+
+        <EditText
+            android:id="@+id/phone_settings_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding = "10dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/niramit_regular"
+            android:inputType="phone"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/text_color"
+            android:imeOptions="actionNext"
+            android:drawableStart="@drawable/ic_phone_call"
+            android:drawableTint="@color/text_color"
+            android:hint="@string/phone_number_src"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/province_settings_edittext"
+                android:inputType="text"
+                android:backgroundTint="@color/text_color"
+                android:fontFamily="@font/niramit_regular"
+                android:imeOptions="actionNext"
+                android:hint="@string/province_src"
+                tools:ignore="NestedWeights" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textSize="17sp"
+                android:inputType="text"
+                android:id="@+id/county_settings_edittext"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:backgroundTint="@color/text_color"
+                android:fontFamily="@font/niramit_regular"
+                android:imeOptions="actionNext"
+                android:hint="@string/county_src"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/address_settings_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding = "10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/niramit_regular"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/text_color"
+            android:imeOptions="actionNext"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableTint="@color/text_color"
+            android:hint="@string/address_src" />
+
+        <EditText
+            android:id="@+id/password_settings_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/niramit_regular"
+            android:drawableStart="@drawable/ic_unlock"
+            android:drawableTint="@color/text_color"
+            android:backgroundTint="@color/text_color"
+            android:hint="@string/password_src"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintVertical_bias="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:text="@string/back_button_text"
+            android:textAllCaps="false"
+            android:fontFamily="@font/niramit_regular"
+            android:layout_width="130dp"
+            android:layout_height="56dp"
+            app:layout_constraintVertical_bias="0"
+            android:backgroundTint="@color/coral_color"
+            app:cornerRadius="10dp"
+            android:id="@+id/back_button"
+            android:layout_marginEnd="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="@string/save_button_text"
+            android:textAllCaps="false"
+            android:fontFamily="@font/niramit_regular"
+            android:layout_width="130dp"
+            android:layout_height="56dp"
+            app:layout_constraintVertical_bias="0"
+            android:backgroundTint="@color/green_color"
+            app:cornerRadius="10dp"
+            android:id="@+id/save_button"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
