@@ -11,7 +11,7 @@ This is an basic food delivery application which was developed for Kodluyoruz Ye
 - View Pager 2
 -Kotlin Safe Args
 
-##Backand Side of Application
+## Backand Side of Application
 We have created a simple rest api server for the backend side of the application.</br> 
 Server's web address -> https://yummyfoodserver.herokuapp.com</br>
 For restaurant list -> https://yummyfoodserver.herokuapp.com/restaurant/all</br>
